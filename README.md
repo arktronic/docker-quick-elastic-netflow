@@ -4,6 +4,8 @@ This repo contains the Dockerfile and prerequisites to build an image to serve a
 
 **IMPORTANT: This is NOT in any way production quality!** Authentication is disabled, and besides, running a whole Elastic Stack in a single container is generally not a great idea. Nevertheless, this can be used to test out what the Elastic Stack can show for network monitoring.
 
+![image](https://user-images.githubusercontent.com/344911/137599306-71c59d93-2e3e-4729-bd6f-ec70855f867a.png)
+
 Usage:
 
 ```
