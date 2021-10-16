@@ -1,0 +1,5 @@
+cluster.name: quicknetflow
+path.data: /var/lib/elasticsearch
+path.logs: /var/log/elasticsearch
+discovery.type: single-node
+xpack.security.enabled: false
