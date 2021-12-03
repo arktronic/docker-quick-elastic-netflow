@@ -27,7 +27,10 @@ COPY ./launch-filebeat.sh /launch-filebeat.sh
 RUN echo "-Xms512m" >> /etc/elasticsearch/jvm.options.d/memory \
  && echo "-Xmx512m" >> /etc/elasticsearch/jvm.options.d/memory \
  && touch /etc/default/locale \
- && addgroup syslog
+ && addgroup syslog \
+ && chmod -R go-w /etc/elasticsearch \
+ && chmod -R go-w /etc/kibana \
+ && chmod -R go-w /etc/filebeat
 
 EXPOSE 5601/tcp
 EXPOSE 2055/udp
