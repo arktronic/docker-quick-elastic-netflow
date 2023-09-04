@@ -1,4 +1,4 @@
-FROM debian:11
+FROM debian:12
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends supervisor cron busybox-syslogd logrotate python3-apt apt-transport-https gnupg net-tools procps wget openjdk-17-jdk curl jq \
