@@ -6,6 +6,7 @@ RUN apt-get update \
  && echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | tee /etc/apt/sources.list.d/elastic-7.x.list \
  && apt-get update \
  && apt-get install elasticsearch kibana filebeat \
+ && sed -i /--openssl-legacy-provider/d /etc/kibana/node.options \
  && rm -rf /var/lib/apt/lists/*
 
 ENV ES_HOME=/usr/share/elasticsearch
